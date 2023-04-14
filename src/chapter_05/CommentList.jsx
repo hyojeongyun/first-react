@@ -3,11 +3,13 @@ import Comment from "./Comment";
 
 const comments = [
     {
+        key: "comment1",
         name: "윤효정",
         comment: "안녕하세요~"
     },
     {
-        name: "윤효정",
+        key: "comment2",
+        name: "윤효정2",
         comment: "리액트 재밌다~~~~"
     }
 ];
@@ -18,7 +20,7 @@ function CommentList(props) {
         <div>
             {comments.map((comment) => {
                     return (
-                        <Comment name={comment.name} comment={comment.comment} />
+                        <Comment key={comment.key} name={comment.name} comment={comment.comment} />
                     )
             })}
         </div>
